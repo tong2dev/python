@@ -1,3 +1,5 @@
-cd python
-pip install Flask
-python3 app.py
+#cd python
+
+#pip install Flask
+
+#python3 app.py
