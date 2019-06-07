@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  api_monitor:
+    image: python:alpine
+    container_name: python 
+    working_dir: /usr/src/app/python
+    volumes:
+      - ./NODE_SERVER/python:/usr/src/app/python
+    ports:
+      - 5000:5000
+    environment:
+        - FLASK_ENV=development
+        - FLASK_APP=app.py
+    networks:
+      - essof_ap
+    tty: true
+networks:
+  essof_ap:
